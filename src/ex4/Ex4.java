@@ -6,24 +6,24 @@ public class Ex4 {
 	
 	public static void main(String args[]) {
 		int a = 0, b = -1;
-		while (a < 10 || a > 9999) {
-			a = Integer.parseInt((JOptionPane.showInputDialog("Digite um numero de 10 a 9999")));
+		while (a < 10 || a > 999999) {
+			a = Integer.parseInt((JOptionPane.showInputDialog("Digite um numero de 10 a 999999")));
 		}
 		while (b < 0 || b > 9) {
-			b = Integer.parseInt((JOptionPane.showInputDialog("Digite um numero de 10 a 9999")));
+			b = Integer.parseInt((JOptionPane.showInputDialog("Digite um numero de 0 a 9")));
 		}
-		System.out.println(Ex4(a,b));
+		System.out.println( "O numero " + b + " aparece " +Ex4(a,b) " vezes no n√∫mero " + b);
 	}
 	
 	public static int Ex4(int a, int b) {
-		//condiÁ„o de parada: quando o valor a chega a 0 n„o È mais possÌvel realizar a divis„o, a funÁ„o retorna 0
+		//condi√ß√£o de parada: quando o valor 'a' chega a 0 n√£o √© mais poss√≠vel realizar a divis√£o, a fun√ß√£o retorna 0
 		if (a == 0)
 			return 0;
 		int m = a%10;
 		a = a/10;
-		// se o resto da divis„o por 10 for igual ao valor b, a funÁ„o retorna 1 e chama a si mesma passando a e b como parametros, o a enviado
-		// È o resultado da divis„o do a inicial por 10. Se o resto da divis„o n„o for igual a b, a funÁ„o retorna 0 e os mesmos parametros.
-		// A funÁ„o tambÈm soma os valores retornados.
+		// se o resto da divis√£o por 10 for igual ao valor 'b', a fun√ß√£o retorna 1 e chama a si mesma passando 'a' e 'b' como parametros, o 'a' enviado
+		// √© o resultado da divis√£o do 'a' inicial por 10. Se o resto da divis√£o n√£o for igual a 'b', a fun√ß√£o retorna 0 e os mesmos parametros.
+		// A fun√ß√£o tamb√©m soma os valores retornados.
 		if(m == b)
 			return 1 + Ex4(a,b);
 		else
