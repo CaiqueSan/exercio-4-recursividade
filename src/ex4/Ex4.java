@@ -12,7 +12,7 @@ public class Ex4 {
 		while (b < 0 || b > 9) {
 			b = Integer.parseInt((JOptionPane.showInputDialog("Digite um numero de 0 a 9")));
 		}
-		System.out.println( "O numero " + b + " aparece " +Ex4(a,b) " vezes no número " + a);
+		System.out.println( "O numero " + b + " aparece " +Ex4(a,b) + " vezes no número " + a);
 	}
 	
 	public static int Ex4(int a, int b) {
